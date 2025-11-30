@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Taicheng Li - Project 1</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+     .card-body { text-align: center; }
+    .project-images img {
+      cursor: pointer;
+      border-radius: 8px;
+      transition: transform 0.3s;
+      margin-bottom: 10px;
+    }
+    .project-images img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+    .navbar-nav .nav-link {
+      margin: 0 15px;
+    }
+  </style>
+</head>
+<body class="bg-light text-dark">
+  <header class="bg-dark text-center text-white py-4 fs-1 fw-bold">TAICHENG LI - Projects</header>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+    <div class="container justify-content-center">
+      <a class="nav-link text-white mx-3" href="index.html">Home</a>
+      <a class="nav-link text-white mx-3" href="resume.html">Resume</a>
+      <a class="nav-link text-white mx-3" href="projects.html">Projects</a>
+    </div>
+  </nav>
+  <br>
+<h3 style="text-align: center;">Contoso Power Bi</h3>
+  <main class="container my-5">
+    <!-- Languages and Tools -->
+    <div class="mb-4 text-center">
+      <span class="badge bg-primary mx-1">SQL</span>
+      <span class="badge bg-primary mx-1">PowerBI</span>
+    </div>
+
+     
+ <!-- Project Images -->
+    <div class="row project-images text-center g-3">
+      <div class="col-md-4">
+        <img src="images/project4.1.png" class="img-fluid" alt="Project Image 1" data-bs-toggle="modal" data-bs-target="#projectModal" data-bs-slide-to="0">
+      </div>
+      <div class="col-md-4">
+        <img src="images/project4.2.png" class="img-fluid" alt="Project Image 2" data-bs-toggle="modal" data-bs-target="#projectModal" data-bs-slide-to="1">
+      </div>
+      
+    </div>
+    <!-- Project Description -->
+    <section class="mb-5">
+ 
+
+
+
+
+  <p>A Visual Database Representation for a Business Case</p>
+
+  
+  <p>
+During Term 6, I completed a project that involved importing and modeling data from Microsoft’s Contoso database using SQL and Power BI. The goal was to transform raw data into clear, business-focused visualizations. Through this assignment, I demonstrated skills in data analysis, data modeling, and building interactive dashboards in Power BI to support decision-making.</p>
+  
+</section>
+
+   
+
+    <!-- Modal Carousel -->
+    <div class="modal fade" id="projectModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <div id="carouselProject1" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/project4.1.png" class="d-block w-100" alt="Project 1 Image 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="images/project4.2.png" class="d-block w-100" alt="Project 1 Image 2">
+                </div>
+                
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselProject1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselProject1" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // 点击图片打开 modal 时切换到对应的 slide
+    var projectImages = document.querySelectorAll('.project-images img');
+    var carousel = new bootstrap.Carousel(document.querySelector('#carouselProject1'));
+
+    projectImages.forEach(function(img, index) {
+      img.addEventListener('click', function() {
+        carousel.to(index);
+      });
+    });
+  </script>
+</body>
+</html>
